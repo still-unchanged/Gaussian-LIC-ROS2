@@ -4,6 +4,18 @@ Gaussian-LIC 的 **ROS 2 Humble 社区移植版**：将 Coco-LIC/R3LIVE 前端�
 
 > 运行需要 NVIDIA GPU、匹配的 CUDA/TensorRT 环境及自行获取的模型权重。本仓库不提供数据集、权重、TensorRT engine 或运行结果。
 
+## 效果展示
+
+点击预览图观看完整视频（MP4）：
+
+[![Retail Street 高斯建图展示](docs/retail_street_preview.jpg)](docs/Retail_Street.mp4)
+
+**Retail Street 高斯建图** · [打开视频](docs/Retail_Street.mp4)
+
+[![Retail Street TSDF 三角网格展示](docs/tsdf_mesh_preview.jpg)](docs/tsdf_mesh_Retail_Streetl.mp4)
+
+**Retail Street TSDF 网格** · [打开视频](docs/tsdf_mesh_Retail_Streetl.mp4)
+
 ## 项目结构
 
 ```text
