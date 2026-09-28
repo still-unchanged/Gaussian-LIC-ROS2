@@ -130,6 +130,4 @@ ros2 run gaussian_lic inspect_m3dgr_avia_projection.py /path/to/Grass01_ros2
 
 ## 许可与上传 GitHub
 
-本仓库基于 [Gaussian-LIC](https://github.com/APRIL-ZJU/Gaussian-LIC) 及其组件移植，原始版权声明予以保留。`LICENSE` 提供 GPL v3 正文，但**不代表所有第三方组件均可按 GPL 重新授权**：尤其 `gaussian_lic/src/simple-knn/LICENSE.md` 有独立的研究／非商业条款。发布或商用前请阅读 [`THIRD_PARTY.md`](THIRD_PARTY.md) 和各组件许可；权重须依上游条款另行获取。
-
-上传前检查 `git status`、`git diff`，确认未提交 bag、权重、engine、生成结果或本机路径。当前工作副本的 `origin` 可能仍指向上游项目；先执行 `git remote -v` 并配置自己的 GitHub 地址，**不要直接向上游推送**。
+本仓库基于 [Gaussian-LIC](https://github.com/APRIL-ZJU/Gaussian-LIC) 及其组件移植，原始版权声明予以保留。`LICENSE` 提供 GPL v3 正文，但**不代表所有第三方组件均可按 GPL 重新授权**
