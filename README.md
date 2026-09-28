@@ -6,15 +6,18 @@ Gaussian-LIC 的 **ROS 2 Humble 社区移植版**：将 Coco-LIC/R3LIVE 前端�
 
 ## 效果展示
 
-点击预览图观看完整视频（MP4）：
+下面左右对比展示高斯建图结果与 TSDF 三角网格结果：
 
-[![Retail Street 高斯建图展示](docs/retail_street_preview.jpg)](docs/Retail_Street.mp4)
-
-**Retail Street 高斯建图** · [打开视频](docs/Retail_Street.mp4)
-
-[![Retail Street TSDF 三角网格展示](docs/tsdf_mesh_preview.jpg)](docs/tsdf_mesh_Retail_Streetl.mp4)
-
-**Retail Street TSDF 网格** · [打开视频](docs/tsdf_mesh_Retail_Streetl.mp4)
+<table>
+  <tr>
+    <td align="center"><strong>Retail Street 高斯建图</strong></td>
+    <td align="center"><strong>Retail Street TSDF 网格</strong></td>
+  </tr>
+  <tr>
+    <td><img src="docs/Retail_Street.gif" alt="Retail Street 高斯建图" width="480"></td>
+    <td><img src="docs/tsdf_mesh_Retail_Street.gif" alt="Retail Street TSDF 网格" width="480"></td>
+  </tr>
+</table>
 
 ## 项目结构
 
