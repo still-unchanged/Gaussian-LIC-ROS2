@@ -1,0 +1,34 @@
+# Build and runtime output
+build/
+install/
+log/
+result/
+results/
+output/
+*_tsdf_input/
+# Datasets and generated geometry
+*.bag
+*.db3
+*.db3-*
+*.mcap
+*.ply
+*.pcd
+*.las
+# Downloaded weights and hardware-specific engines
+*.pth
+*.onnx
+*.engine
+*.pt
+# Python/editor/temp files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+.vscode/
+.idea/
+*.orig
+*.bak*
+*.tmp
+.env
+.env.*

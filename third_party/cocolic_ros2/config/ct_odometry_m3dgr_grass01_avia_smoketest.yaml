@@ -1,0 +1,25 @@
+# Short, non-destructive calibration check for Grass01.  It uses the same
+# sensors and settings as ct_odometry_m3dgr_grass01_avia.yaml.
+odometry_mode: 1
+lidar_yaml: /m3dgr_grass01/lidar_avia.yaml
+imu_yaml: /m3dgr_grass01/imu_avia.yaml
+camera_yaml: /m3dgr_grass01/camera.yaml
+bag_path: /data/M3DGR/Grass01.bag
+bag_start: 0.
+bag_durr: 20.
+t_add: 0.1
+distance0: 0.03
+non_uniform: true
+division_coarse: 1
+t_begin_add_cam: 5.0
+lidar_iter: 2
+use_lidar_scale: true
+lidar_weight: 500.0
+image_weight: 4.0
+gyroscope_noise_density: 3.2194626705221046e-03
+gyroscope_random_walk: 7.1383392426109448e-05
+accelerometer_noise_density: 2.0846225165441278e-02
+accelerometer_random_walk: 3.4099978362929511e-04
+is_evo_viral: false
+if_3dgs: true
+lidar_skip: 10

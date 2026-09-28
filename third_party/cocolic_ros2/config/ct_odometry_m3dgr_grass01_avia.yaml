@@ -1,0 +1,37 @@
+# M3DGR Grass01: use Livox Avia, its built-in IMU, and D435i RGB camera.
+# Coco-LIC reads the converted ROS2 bag itself and publishes the four Gaussian-LIC
+# topics (/image_for_gs, /depth_for_gs, /pose_for_gs, /points_for_gs).
+odometry_mode: 1  # LICO
+
+lidar_yaml: /m3dgr_grass01/lidar_avia.yaml
+imu_yaml: /m3dgr_grass01/imu_avia.yaml
+camera_yaml: /m3dgr_grass01/camera.yaml
+
+bag_path: /data/M3DGR/Grass01.bag
+bag_start: 0.
+bag_durr: -1
+
+### SplineParams ###
+t_add: 0.1
+distance0: 0.03
+non_uniform: true
+division_coarse: 1
+
+### OptimizationParams ###
+t_begin_add_cam: 5.0
+lidar_iter: 2
+use_lidar_scale: true
+lidar_weight: 500.0
+image_weight: 4.0
+# Official M3DGR Livox Avia IMU, average-axis Allan-variance values.
+gyroscope_noise_density: 3.2194626705221046e-03
+gyroscope_random_walk: 7.1383392426109448e-05
+accelerometer_noise_density: 2.0846225165441278e-02
+accelerometer_random_walk: 3.4099978362929511e-04
+
+### EvaluationParams ###
+is_evo_viral: false
+
+### Gaussian-LIC ###
+if_3dgs: true
+lidar_skip: 10

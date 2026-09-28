@@ -1,0 +1,5 @@
+std_msgs/Header header
+
+sensor_msgs/PointCloud2 full_cloud
+sensor_msgs/PointCloud2 corner_cloud
+sensor_msgs/PointCloud2 surface_cloud

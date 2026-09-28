@@ -1,0 +1,63 @@
+# Gaussian-LIC configuration for an M3DGR RGB-D/LiDAR sequence.
+#
+# Grass01 uses the M3DGR platform's Realsense D435i RGB camera.  These values
+# are from the official calibration.md for /camera/color/image_raw.  Replace
+# them only if image_topic selects a different camera or a resized image.
+width: 640
+height: 480
+fx: 607.79772949218
+fy: 607.83526613281
+cx: 328.79772949218
+cy: 245.53321838378
+
+select_every_k_frame: 20
+keyframe_mode: fixed
+keyframe_min_frame_gap: 2
+keyframe_min_interval_s: 0.30
+keyframe_max_interval_s: 0.80
+keyframe_target_normalized_parallax: 0.10
+keyframe_emergency_normalized_parallax: 0.20
+keyframe_min_normalized_parallax: 0.10
+keyframe_min_overlap: 0.70
+keyframe_min_exposure_score: 0.60
+keyframe_min_sharpness_ratio: 0.50
+keyframe_min_depth_coverage: 0.002
+keyframe_depth_consistency_rel: 0.05
+# Retain only recent non-keyframe views for final metrics/renders; all of
+# them are otherwise accumulated in RAM during a long rosbag.
+max_test_cameras: 20
+
+# The adapter publishes metric float32 depth on /depth_for_gs.  Keep this
+# enabled only when the TensorRT completion engine is installed.
+depth_completion: true
+patch_size: 10
+max_depth: 50.0
+
+sh_degree: 3
+white_background: false
+random_background: false
+convert_SHs_python: false
+compute_cov3D_python: false
+lambda_erank: 0
+scaling_scale: 1
+# Quality-oriented full-sequence profile for the 8 GB RTX 4060.  A per-view
+# quota spreads the model over Grass01 rather than filling it at the start;
+# the runtime reserve keeps 1.5 GB available for CUDA workspaces.
+max_gaussians: 630000
+max_gaussians_per_keyframe: 4300
+gpu_min_free_mb: 1500
+
+position_lr: 0.00016
+feature_lr: 0.0050
+opacity_lr: 0.05
+scaling_lr: 0.005
+rotation_lr: 0.001
+lambda_dssim: 0.2
+optimize_depth: true
+lambda_depth: 0.005
+iteration_decay: false
+
+apply_exposure: false
+exposure_lr: 0.001
+skybox_points_num: 0
+skybox_radius: 1000
